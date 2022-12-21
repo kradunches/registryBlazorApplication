@@ -5,73 +5,75 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorAppRegisty.Client
 build_property.RootNamespace = BlazorAppRegisty.Client
-build_property.ProjectDir = D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Client\
+build_property.ProjectDir = D:\C#\registryBlazorApplication\Registry.API\BlazorAppRegisty\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Client
+build_property.MSBuildProjectDirectory = D:\C#\registryBlazorApplication\Registry.API\BlazorAppRegisty\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/App.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddDiscipline.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddDiscipline.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRGlzY2lwbGluZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddDisciplineComponent.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddDisciplineComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRGlzY2lwbGluZUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddLesson.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddLesson.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTGVzc29uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddLessonComponent.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/AddLessonComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkTGVzc29uQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/Counter.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/DisciplineListComponent.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/DisciplineListComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY2lwbGluZUxpc3RDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/FetchData.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/Index.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/LessonListComponent.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/LessonListComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVzc29uTGlzdENvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/ListDiscipline.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Pages/ListDiscipline.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdERpc2NpcGxpbmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/SurveyPrompt.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/_Imports.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/MainLayout.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5y0fiibxy4
 
-[D:/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/NavMenu.razor]
+[D:/C\#/registryBlazorApplication/Registry.API/BlazorAppRegisty/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qjsme9ykwr

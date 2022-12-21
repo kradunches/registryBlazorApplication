@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ay7hEns4B3tvFuu2x31IvXBZLa7Dn3iNhHY+iKYRawg2tj3iL176G4sHUh1t+dodGkaRudIbEuC5z5aeZJGI7g==",
+  "dgSpecHash": "wLB7klZXJ18dlZlG88Vc9iZNSqZ21WvxGjxzz8HlC7N5upKIjwa1QahP0vKepYg1CQTFy/6uxOi2/Z6pMJkHkA==",
   "success": true,
-  "projectFilePath": "D:\\registryBlazorApplication\\Registry.API\\BlazorAppRegisty\\Shared\\BlazorAppRegisty.Shared.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\C#\\registryBlazorApplication\\Registry.API\\BlazorAppRegisty\\Shared\\BlazorAppRegisty.Shared.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
