@@ -36,12 +36,6 @@ namespace Registry.Infrastructure.Repository
           .FirstOrDefaultAsync();
     }
 
-    public async Task<Discipline> GetByGroupAsync(string name)
-    {
-      return await _context.Disciplines
-          .Where(p => p.Name == name)
-          .FirstOrDefaultAsync();
-    }
 
     public async Task AddAsync(Discipline person)
     {
@@ -90,4 +84,5 @@ namespace Registry.Infrastructure.Repository
       _context.ChangeTracker.Clear();
     }
   }
+    
 }

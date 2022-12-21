@@ -1,0 +1,17 @@
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Infrastructure.deps.json
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Infrastructure.runtimeconfig.json
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Infrastructure.dll
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Infrastructure.pdb
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Domain.dll
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\bin\Debug\net6.0\Registry.Domain.pdb
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.csproj.AssemblyReference.cache
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.AssemblyInfoInputs.cache
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.AssemblyInfo.cs
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.csproj.CoreCompileInputs.cache
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.csproj.CopyComplete
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.dll
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\refint\Registry.Infrastructure.dll
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.pdb
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\Registry.Infrastructure.genruntimeconfig.cache
+D:\registryBlazorApplication\Registry.API\Registry.Infrastructure\obj\Debug\net6.0\ref\Registry.Infrastructure.dll

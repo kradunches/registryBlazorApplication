@@ -1,100 +1,80 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Registry.Domain.Model;
+using Microsoft.EntityFrameworkCore;
 using Registry.Infrastructure.Data;
+using Registry.Infrastructure.Repository;
 
 namespace Registry.API.Controllers
 {
-  public class LessonController
-  {
-    private readonly Context _context;
-    private readonly DisciplineRepository _disciplineRepository;
-    private LessonRepository _lessonRepository;
-    public LessonController(Context context)
+
+    [Route("api/rewards/[controller]")]
+    [ApiController]
+    public class LessonController : ControllerBase
     {
-      _context = context;
-      _disciplineRepository = new DisciplineRepository(_context);
-      _lessonRepository = new LessonRepository(_context);
+        private readonly Context _context;
+        private readonly LessonRepository _lessonRepository;
+        private DisciplineRepository _disciplineRepository;
+        public LessonController(Context context)
+        {
+            _context = context;
+            _lessonRepository = new LessonRepository(_context);
+            _disciplineRepository = new DisciplineRepository(_context);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Lesson>>> GetLesson()
+        {
+            return await _lessonRepository.GetAllAsync();
+        }
+
+  
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Lesson>> GetAchievement(int id)
+        {
+
+            var person = await _lessonRepository.GetByIdAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return person;
+        }
+
+        
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAchievement(int id, Lesson achievement)
+        {
+            Console.WriteLine("JOJO_REFERENCE_TWO");
+            if (id != achievement.Id)
+            {
+                return BadRequest();
+            }
+
+            await _lessonRepository.UpdateAsync(achievement);
+
+            return NoContent();
+        }
+
+        
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePerson(int id)
+        {
+
+            var person = await _lessonRepository.GetByIdAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+
+            await _lessonRepository.DeleteAsync(id);
+
+            return NoContent();
+        }
+
+        private bool AchievementExists(int id)
+        {
+            return _context.Lessons.Any(e => e.Id == id);
+        }
     }
-    // GET: api/Lesson/5
-    [HttpGet("da/{id}")]
-    public async Task<ActionResult<Lesson>> GetDayByDate(string disciplineName)
-    {
-      return await _lessonRepository.GetByDisciplineNameAsync(disciplineName);
-    }
-
-    // GET: api/Lesson/5
-    [HttpGet("vis/{id}")]
-    public async Task<ActionResult<Lesson>> GetLessonById(int id)
-    {
-
-      var lesson = await _lessonRepository.GetByIdAsync(id);
-      if (lesson == null)
-      {
-        return NotFound();
-      }
-      return lesson;
-    }
-
-    // GET: api/Lesson/5
-    [HttpGet("lesson/{id}")]
-    public async Task<ActionResult<Lesson>> GetLessonByDate(string date)
-    {
-      var lesson = await _lessonRepository.GetByDateAsync(date);
-      if (lesson == null)
-      {
-        return NotFound();
-      }
-      return lesson;
-    }
-
-    // PUT: api/Lesson/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPut("vis/{id}")]
-    public async Task<IActionResult> PutLesson(int id, Lesson lesson)
-    {
-      if (id != lesson.Id)
-      {
-        return BadRequest();
-      }
-
-      await _lessonRepository.UpdateAsync(lesson);
-
-      return NoContent();
-    }
-
-    // POST: api/Lesson
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPost]
-    public async Task<ActionResult<Discipline>> PostLesson(Lesson lesson)
-    {
-      //var discipline = await _disciplineRepository.GetByIdAsync(disciplineId);
-      //var day = await _dayRepository.GetByDateAsync(date);
-      //await _disciplineRepository.UpdateAsync(discipline);
-      //return CreatedAtAction("GetDiscipline", new { id = disciplineId }, discipline);
-
-      return NoContent();
-    }
-
-    // DELETE: api/Lesson/5
-    [HttpDelete("vis/{id}")]
-    public async Task<IActionResult> DeleteLesson(int id)
-    {
-
-      var lesson = await _lessonRepository.GetByIdAsync(id);
-      if (lesson == null)
-      {
-        return NotFound();
-      }
-
-
-      await _lessonRepository.DeleteAsync(id);
-
-      return NoContent();
-    }
-
-    private bool LessonExist(int id)
-    {
-      return _context.Lessons.Any(e => e.Id == id);
-    }
-  }
 }

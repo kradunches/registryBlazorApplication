@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "F5gUgHXERT9GtomIxhuV7mqBt4sLVamEXbG/0pfDEMQ=",
+  "Source": "Registry.API",
+  "BasePath": "_content/Registry.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

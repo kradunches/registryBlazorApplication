@@ -1,101 +1,89 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Registry.Domain.Model;
 using Registry.Infrastructure.Data;
+using Registry.Infrastructure.Repository;
 
 namespace Registry.API.Controllers
 {
-  [Route("api/discipline/[controller]")]
-  [ApiController]
-  public class DisciplineController : Controller
-  {
-    private readonly Context _context;
-    private readonly DisciplineRepository _disciplineRepository;
-    private LessonRepository _lessonRepository;
-    public DisciplineController(Context context)
+    /////
+    ///
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DisciplinesController : ControllerBase
     {
-      _context = context;
-      _disciplineRepository = new DisciplineRepository(_context);
+        private readonly Context _context;
+        private DisciplineRepository _disciplineRepository;
+        public DisciplinesController(Context context)
+        {
+            _context = context;
+            _disciplineRepository = new DisciplineRepository(_context);
+        }
+
+        // GET: api/Disciplines
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Discipline>?>> GetDisciplines()
+        {
+            return await _disciplineRepository.GetAllAsync();
+        }
+
+        // GET: api/Disciplines/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Discipline>> GetDiscipline(int id)
+        {
+
+            var person = await _disciplineRepository.GetByIdAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+            return person;
+        }
+
+        // PUT: api/Disciplines/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutDiscipline(int id, Discipline discipline)
+        {
+            if (id != discipline.Id)
+            {
+                return BadRequest();
+            }
+
+            await _disciplineRepository.UpdateAsync(discipline);
+
+            return NoContent();
+        }
+
+        // POST: api/Disciplines
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<Discipline>> PostDiscipline(Discipline discipline)
+        {
+            await _disciplineRepository.AddAsync(discipline);
+            return CreatedAtAction("GetDiscipline", new { id = discipline.Id }, discipline);
+        }
+
+        // DELETE: api/Disciplines/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePerson(int id)
+        {
+            Console.WriteLine("deleted");
+            var person = await _disciplineRepository.GetByIdAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+
+            await _disciplineRepository.DeleteAsync(id);
+
+            return NoContent();
+        }
+       
+
+        private bool DisciplineExists(int id)
+        {
+            return _context.Disciplines.Any(e => e.Id == id);
+        }
     }
-    // GET: api/Discipline
-    [HttpGet()]
-    public async Task<ActionResult<IEnumerable<Discipline>>> GetDisciplines()
-    {
-      return await _disciplineRepository.GetAllAsync();
-    }
-
-    // GET: api/Discipline/5
-    [HttpGet("stud/{id}")]
-    public async Task<ActionResult<Discipline>> GetDiscipline(int id)
-    {
-
-      var person = await _disciplineRepository.GetByIdAsync(id);
-      if (person == null)
-      {
-        return NotFound();
-      }
-      return person;
-    }
-
-    // GET: api/Discipline/5
-    [HttpGet("gr/{id}")]
-    public async Task<ActionResult<Discipline>> GetDisciplinesFromGroup(string groupName)
-    {
-
-      var person = await _disciplineRepository.GetByGroupAsync(groupName);
-      if (person == null)
-      {
-        return NotFound();
-      }
-      return person;
-    }
-
-    // PUT: api/Discipline/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPut("st/{id}")]
-    public async Task<IActionResult> PutDiscipline(int id, Discipline discipline)
-    {
-      Console.WriteLine("JOJO_REFERENCE_TWO");
-      if (id != discipline.Id)
-      {
-        return BadRequest();
-      }
-
-      await _disciplineRepository.UpdateAsync(discipline);
-
-      return NoContent();
-    }
-
-    // POST: api/Discipline
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPost]
-    public async Task<ActionResult<Discipline>> PostDiscipline(Discipline discipline)
-    {
-      await _disciplineRepository.AddAsync(discipline);
-      return CreatedAtAction("GetDiscipline", new { id = discipline.Id }, discipline);
-
-      return NoContent();
-    }
-
-    // DELETE: api/Discipline/5
-    [HttpDelete("per/{id}")]
-    public async Task<IActionResult> DeletePerson(int id)
-    {
-
-      var person = await _disciplineRepository.GetByIdAsync(id);
-      if (person == null)
-      {
-        return NotFound();
-      }
-
-
-      await _disciplineRepository.DeleteAsync(id);
-
-      return NoContent();
-    }
-
-    private bool DisciplineExist(int id)
-    {
-      return _context.Disciplines.Any(e => e.Id == id);
-    }
-  }
 }
