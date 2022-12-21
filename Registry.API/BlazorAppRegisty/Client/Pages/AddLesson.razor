@@ -1,0 +1,22 @@
+﻿@page "/addLesson"
+@using System.Net.Http
+@inject HttpClient Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Registry.Domain
+
+<PageTitle>Добавление занятия</PageTitle>
+
+<h1>Добавление нового занятия</h1>
+
+<AddLessonComponent OnAddLesson="ToMessage" />
+
+@code {
+    string Message { get; set; } = "";
+
+    void ToMessage(string message1)
+    {
+        Message = message1;
+        Console.WriteLine(Message);
+    }
+}

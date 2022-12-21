@@ -1,0 +1,68 @@
+﻿
+@using System.Net.Http
+@inject HttpClient Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Registry.Domain
+@using Registry.Domain.Model
+
+<h3>Список дисциплин</h3>
+<p>@MessageAdd</p>
+
+@if (fulfil && Disciplines == null)
+{
+    <p>Дисциплины отсутствуют.</p>
+}
+else if (!fulfil && Disciplines == null)
+{
+    <p>Идет загрузка...</p>
+}
+
+@if (Disciplines != null)
+{
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Название</th>
+            <th>Количество часов</th>
+        </tr>
+        @foreach (var disciplines in Disciplines)
+        {
+            <tr>
+                <td>@disciplines.Id</td>
+                <td>@disciplines.Name</td>
+                <td>@disciplines.Time</td>
+                @*<td><a class="custom-button" href="EditLesson/@lessons.Id">Изменить данные</a></td>*@
+                <td><a class="custom-button" href="AddDiscipline">Добавить дисциплину</a></td>
+                <td><button class="delete-button" @onclick="() => DeleteDiscipline(disciplines.Id)">Удалить дисциплину</button></td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    [Parameter]
+    public string MessageAdd { get; set; }
+
+    private IEnumerable<Discipline> Disciplines;
+    private bool fulfil = false;
+
+    protected override async Task OnParametersSetAsync() =>
+        Disciplines = await Http.GetFromJsonAsync<Discipline[]>
+            ("https://localhost:7233/api/Discipline");
+
+    protected override async Task OnInitializedAsync()
+    {
+        Disciplines = await Http.GetFromJsonAsync<IEnumerable<Discipline>>
+            ("https://localhost:7233/api/Discipline");
+        fulfil = true;
+    }
+
+    public EventCallback<string> OnDeleteDiscipline { get; set; }
+
+    private async Task DeleteDiscipline(int ID)
+    {
+        Console.WriteLine(ID);
+        await Http.DeleteAsync("https://localhost:7233/api/Discipline" + ID);
+    }
+}

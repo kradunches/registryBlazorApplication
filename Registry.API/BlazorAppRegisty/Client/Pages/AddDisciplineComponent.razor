@@ -1,0 +1,35 @@
+﻿@using System.Net.Http
+@inject HttpClient Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Registry.Domain.Model
+@using Registry.Domain
+
+<div class="form-container">
+    <input @bind="newName" placeholder="Название" />
+    <input @bind="newTime" placeholder="Количество часов" />
+    
+    <button class="custom-button" @onclick="AddDiscipline">Добавить новую дисциплину</button>
+</div>
+
+@code {
+    private string newName;
+    private int newTime;
+
+    [Parameter]
+    public EventCallback<string> OnAddDiscipline { get; set; }
+
+    private async Task AddDiscipline()
+    {
+        var discipline = new Discipline
+            {
+                Name = newName,
+                Time = newTime
+
+            };
+        newName = "";
+        newTime = 0;
+
+        await Http.PostAsJsonAsync("https://localhost:7233/api/Discipline", discipline);
+    }
+}

@@ -1,0 +1,22 @@
+﻿@page "/addDiscipline"
+@using System.Net.Http
+@inject HttpClient Http
+@using System.Net.Http.Json
+@using System.Threading.Tasks
+@using Registry.Domain
+
+<PageTitle>Добавление дисциплины</PageTitle>
+
+<h1>Добавление новой дисциплины</h1>
+
+<AddDisciplineComponent OnAddDiscipline="ToMessage" />
+
+@code {
+    string Message { get; set; } = "";
+
+    void ToMessage(string message1)
+    {
+        Message = message1;
+        Console.WriteLine(Message);
+    }
+}

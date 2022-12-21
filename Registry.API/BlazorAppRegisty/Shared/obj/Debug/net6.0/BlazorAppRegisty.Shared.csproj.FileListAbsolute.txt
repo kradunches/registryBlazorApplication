@@ -1,0 +1,12 @@
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\bin\Debug\net6.0\BlazorAppRegisty.Shared.deps.json
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\bin\Debug\net6.0\BlazorAppRegisty.Shared.dll
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\bin\Debug\net6.0\BlazorAppRegisty.Shared.pdb
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.csproj.AssemblyReference.cache
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.AssemblyInfoInputs.cache
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.AssemblyInfo.cs
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.csproj.CoreCompileInputs.cache
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.dll
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\refint\BlazorAppRegisty.Shared.dll
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\BlazorAppRegisty.Shared.pdb
+D:\registryBlazorApplication\Registry.API\BlazorAppRegisty\Shared\obj\Debug\net6.0\ref\BlazorAppRegisty.Shared.dll
