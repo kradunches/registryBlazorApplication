@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\C#\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {}
+  },
+  "projects": {
+    "D:\\C#\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\C#\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
+        "projectName": "Registry.Domain",
+        "projectPath": "D:\\C#\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
+        "packagesPath": "C:\\Users\\chery\\.nuget\\packages\\",
+        "outputPath": "D:\\C#\\Registry.API\\Registry.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chery\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
