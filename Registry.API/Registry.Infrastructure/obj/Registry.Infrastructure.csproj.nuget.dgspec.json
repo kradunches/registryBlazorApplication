@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj": {}
+    "D:\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {
+    "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
+        "projectUniqueName": "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
         "projectName": "Registry.Domain",
-        "projectPath": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
-        "packagesPath": "C:\\Users\\chery\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\obj\\",
+        "projectPath": "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\chery\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,39 +55,60 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj": {
+    "D:\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj",
+        "projectUniqueName": "D:\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj",
         "projectName": "Registry.Infrastructure",
-        "projectPath": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\chery\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\obj\\",
+        "projectPath": "D:\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\Registry.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "D:\\registryBlazorApplication\\Registry.API\\Registry.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\chery\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {
-                "projectPath": "D:\\C#\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj"
+              "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj": {
+                "projectPath": "D:\\registryBlazorApplication\\Registry.API\\Registry.Domain\\Registry.Domain.csproj"
               }
             }
           }
@@ -121,12 +149,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

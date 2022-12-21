@@ -33,7 +33,7 @@ public class TestPersonRepository
 
     Assert.True(disciplineRepository.GetAllAsync().Result.Count == 2);
     Assert.Equal("Математика", disciplineRepository.GetByNameAsync("Математика").Result.Name);
-    Assert.Equal("Информатика", disciplineRepository.GetByNameAsync("Информатика").Result.Name);
+    Assert.Equal("Программирование", disciplineRepository.GetByNameAsync("Программирование").Result.Name);
   }
 
   [Fact]
@@ -41,16 +41,19 @@ public class TestPersonRepository
   {
     var testHelper = new TestHelper();
     var disciplineRepository = testHelper.DisciplineRepository;
-    var discipline = disciplineRepository.GetByNameAsync("Информатика").Result;
+    var discipline = disciplineRepository.GetByNameAsync("Программирование").Result;
     //Запрещаем отслеживание сущностей (разрываем связи с БД)
     disciplineRepository.ChangeTrackerClear();
     discipline.Name = "Проектирование";
-    disciplineRepository.UpdateAsync(discipline).Wait();
+        discipline.AddLesson(new Lesson
+        {
+            Topic = "Name",
+            LessonType = "Лекция",
+        });
+        disciplineRepository.UpdateAsync(discipline).Wait();
 
     Assert.Equal("Проектирование", disciplineRepository.GetByNameAsync("Проектирование").Result.Name);
-
-
-  }
+    }
 
 
   [Fact]
@@ -58,7 +61,7 @@ public class TestPersonRepository
   {
     var testHelper = new TestHelper();
     var disciplineRepository = testHelper.DisciplineRepository;
-    var discipline = disciplineRepository.GetByNameAsync("Информатика").Result;
+    var discipline = disciplineRepository.GetByNameAsync("Программирование").Result;
     //Запрещаем отслеживание сущностей (разрываем связи с БД)
     disciplineRepository.ChangeTrackerClear();
 
@@ -77,21 +80,20 @@ public class TestPersonRepository
   {
     var testHelper = new TestHelper();
     var disciplineRepository = testHelper.DisciplineRepository;
-    var discipline = disciplineRepository.GetByNameAsync("Информатика").Result;
+    var discipline = disciplineRepository.GetDisciplineAsync("Программирование").Result;
     //Запрещаем отслеживание сущностей (разрываем связи с БД)
     disciplineRepository.ChangeTrackerClear();
     discipline.Name = "Математика";
-    var lessons = new Lesson
-    {
-      Topic = "3 курс",
-      LessonType = "Лекция",
-    };
-    discipline.AddLesson(lessons);
+        discipline.AddLesson(new Lesson
+        {
+            Topic = "Новая",
+            LessonType = "Лабораторная"
+        });
 
-    disciplineRepository.UpdateAsync(discipline).Wait();
+        disciplineRepository.UpdateAsync(discipline).Wait();
 
-    Assert.Equal("Математика", disciplineRepository.GetByNameAsync("Математика").Result.Name);
-    Assert.Equal(1, disciplineRepository.GetByNameAsync("Математика").Result.LessonCount);
+    Assert.Equal("Математика", disciplineRepository.GetDisciplineAsync("Математика").Result.Name);
+    Assert.Equal(2, disciplineRepository.GetDisciplineAsync("Математика").Result.LessonCount);
   }
 
   [Fact]
@@ -99,7 +101,7 @@ public class TestPersonRepository
   {
     var testHelper = new TestHelper();
     var disciplineRepository = testHelper.DisciplineRepository;
-    var discipline = disciplineRepository.GetByNameAsync("Информатика").Result;
+    var discipline = disciplineRepository.GetByNameAsync("Программирование").Result;
     //Запрещаем отслеживание сущностей (разрываем связи с БД)
     disciplineRepository.ChangeTrackerClear();
     var lessons = new Lesson
@@ -112,7 +114,7 @@ public class TestPersonRepository
 
     disciplineRepository.UpdateAsync(discipline).Wait();
 
-    Assert.Equal(0, disciplineRepository.GetByNameAsync("Информатика").Result.LessonCount);
+    Assert.Equal(0, disciplineRepository.GetByNameAsync("Программирование").Result.LessonCount);
   }
 
 }

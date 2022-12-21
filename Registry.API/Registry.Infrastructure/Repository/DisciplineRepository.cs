@@ -28,8 +28,15 @@ namespace Registry.Infrastructure.Repository
           .Where(p => p.Id == id)
           .FirstOrDefaultAsync();
     }
+        public async Task<Discipline?> GetDisciplineAsync(string name)
+        {
+            return await _context.Disciplines.
+                         Where(p => p.Name == name).
+                         Include(p => p.Lessons).
+                         FirstOrDefaultAsync();
+        }
 
-    public async Task<Discipline> GetByNameAsync(string name)
+        public async Task<Discipline> GetByNameAsync(string name)
     {
       return await _context.Disciplines
           .Where(p => p.Name == name)

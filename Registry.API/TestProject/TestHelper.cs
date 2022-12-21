@@ -29,6 +29,12 @@ namespace TestProject
         Time = 185,
 
       };
+            person1.AddLesson(new Lesson
+            {
+                Topic = "NewLesson",
+                LessonType = "Практика"
+
+            });
 
       _context.Disciplines.Add(person1);
       _context.SaveChanges();
