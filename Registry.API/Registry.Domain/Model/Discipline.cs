@@ -11,7 +11,7 @@ namespace Registry.Domain.Model
   {
     [Key]
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
     public int Time { get; set; }
     //Свойства навигации
     public List<Lesson> Lessons { get; set; } = new List<Lesson>();

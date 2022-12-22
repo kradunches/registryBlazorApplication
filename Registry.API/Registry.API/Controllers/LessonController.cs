@@ -7,7 +7,7 @@ using Registry.Infrastructure.Repository;
 namespace Registry.API.Controllers
 {
 
-    [Route("api/rewards/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LessonController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace Registry.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Lesson>>> GetLesson()
+        public async Task<List<Lesson>> GetLesson()
         {
             return await _lessonRepository.GetAllAsync();
         }
@@ -55,7 +55,15 @@ namespace Registry.API.Controllers
             return NoContent();
         }
 
-        
+        // POST: api/Disciplines
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task PostLesson(Lesson lesson)
+        {
+            await _lessonRepository.AddAsync(lesson);
+        }
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePerson(int id)
         {
@@ -72,7 +80,7 @@ namespace Registry.API.Controllers
             return NoContent();
         }
 
-        private bool AchievementExists(int id)
+        private bool LessonExists(int id)
         {
             return _context.Lessons.Any(e => e.Id == id);
         }

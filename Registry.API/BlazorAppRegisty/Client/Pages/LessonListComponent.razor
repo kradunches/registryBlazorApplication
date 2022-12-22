@@ -50,12 +50,12 @@ else if (!fulfil && Lessons == null)
 
     protected override async Task OnParametersSetAsync() =>
         Lessons = await Http.GetFromJsonAsync<List<Lesson>>
-            ("https://localhost:7233/api/Lesson");
+            ("https://localhost:7037/api/Lesson");
 
     protected override async Task OnInitializedAsync()
     {
         Lessons = await Http.GetFromJsonAsync<List<Lesson>>
-            ("https://localhost:7233/api/Lesson");
+            ("https://localhost:7037/api/Lesson");
         fulfil = true;
     }
 
@@ -64,6 +64,6 @@ else if (!fulfil && Lessons == null)
     private async Task DeleteLesson(int ID)
     {
         Console.WriteLine(ID);
-        await Http.DeleteAsync("https://localhost:7233/api/Lesson" + ID);
+        await Http.DeleteAsync("https://localhost:7037/api/Lesson" + ID);
     }
 }

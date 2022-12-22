@@ -49,12 +49,12 @@ else if (!fulfil && Disciplines == null)
 
     protected override async Task OnParametersSetAsync() =>
         Disciplines = await Http.GetFromJsonAsync<Discipline[]>
-            ("https://localhost:7233/api/Discipline");
+            ("https://localhost:7037/api/Disciplines");
 
     protected override async Task OnInitializedAsync()
     {
         Disciplines = await Http.GetFromJsonAsync<IEnumerable<Discipline>>
-            ("https://localhost:7233/api/Discipline");
+            ("https://localhost:7037/api/Disciplines");
         fulfil = true;
     }
 
@@ -63,6 +63,6 @@ else if (!fulfil && Disciplines == null)
     private async Task DeleteDiscipline(int ID)
     {
         Console.WriteLine(ID);
-        await Http.DeleteAsync("https://localhost:7233/api/Discipline" + ID);
+        await Http.DeleteAsync("https://localhost:7037/api/Disciplines" + ID);
     }
 }

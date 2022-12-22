@@ -21,17 +21,18 @@
 <div class="form-container">
     <input @bind="newTopic" placeholder="Тема" />
     <input @bind="newLessonType" placeholder="Тип занятия" />
-    
-    <button class="custom-button" @onclick="AddLesson">Добавить новое занятие</button>
+    <input @bind="newDisciplineID" placeholder="Тип занятия" />
+
 </div>
 
 
-@code {
+<button class="custom-button" @onclick="AddLesson">Добавить новое занятие</button>
 
+@code {
+    private Lesson newLesson = new Lesson();
     private string newTopic;
     private string newLessonType;
-
-
+    private int newDisciplineID;
 
     [Parameter]
     public EventCallback<string> OnAddLesson { get; set; }
@@ -41,13 +42,15 @@
         var lesson = new Lesson
             {
                 Topic = newTopic,
-                LessonType = newLessonType
+                LessonType = newLessonType,
+                DisciplineId = newDisciplineID,
 
             };
         newTopic = "";
         newLessonType = "";
+        newDisciplineID = 0;
 
-        await Http.PostAsJsonAsync("https://localhost:7233/api/Lesson", lesson);
+        await Http.PostAsJsonAsync("https://localhost:7037/api/Lesson", lesson);
         await OnAddLesson.InvokeAsync("OK");
     }
 }
