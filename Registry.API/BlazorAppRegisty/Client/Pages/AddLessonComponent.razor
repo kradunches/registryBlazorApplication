@@ -21,7 +21,7 @@
 <div class="form-container">
     <input @bind="newTopic" placeholder="Тема" />
     <input @bind="newLessonType" placeholder="Тип занятия" />
-    <input @bind="newDisciplineID" placeholder="Тип занятия" />
+    <input @bind="newDisciplineID" placeholder="ID дисциплины" />
 
 </div>
 
@@ -44,11 +44,12 @@
                 Topic = newTopic,
                 LessonType = newLessonType,
                 DisciplineId = newDisciplineID,
+                Discipline = new()
 
             };
-        newTopic = "";
-        newLessonType = "";
-        newDisciplineID = 0;
+        //newTopic = "";
+        //newLessonType = "";
+        //newDisciplineID = 0;
 
         await Http.PostAsJsonAsync("https://localhost:7037/api/Lesson", lesson);
         await OnAddLesson.InvokeAsync("OK");

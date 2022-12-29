@@ -63,6 +63,6 @@ else if (!fulfil && Disciplines == null)
     private async Task DeleteDiscipline(int ID)
     {
         Console.WriteLine(ID);
-        await Http.DeleteAsync("https://localhost:7037/api/Disciplines" + ID);
+        await Http.DeleteAsync("https://localhost:7037/api/Disciplines/" + ID);
     }
 }
